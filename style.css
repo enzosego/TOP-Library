@@ -1,0 +1,136 @@
+body {
+    background-color: #edf2f4;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#top-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+#title {
+    display: flex;
+    margin-top: 0;
+}
+
+#title h1 {
+    margin-top: 0;;
+}
+
+#logo {
+    height: 30px;
+    padding-right: 10px;
+}
+
+#new-form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: larger;
+}
+
+#check {
+    margin-right: 30px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.text-input {
+    font-size: medium;
+    background-color: #FFF;
+    border-radius: 3px;
+    border: none;
+}
+
+.text-input::placeholder {
+    font-size: larger;
+}
+
+#new-book {
+    border: none;
+    background-color: #2978A0;
+    border-radius: 10px;
+    height: initial;
+    transition: transform 0.2s linear;
+    cursor: pointer;
+    height: fit-content;
+    padding: 10px 10px;
+    align-self: center;
+    margin-left: 0;
+    outline: none;
+}
+
+#new-book:active {
+    transform: translateY(4px)
+}
+
+#book-info {
+    display: flex;
+    justify-content: baseline;
+}
+
+#book-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-gap: 80px;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.bookTiles {
+    height: 270px;
+    background-color: #2978A0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px;
+    transition: transform 0.1s linear;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookTiles p {
+    padding: 0%;
+    margin-top: 0%;
+    margin-bottom: 7%;
+}
+
+.bookTiles:hover, #newBook:hover {
+    transform: scale(1.02);
+}
+
+.remove-btn {
+    background-color: #2a8bbb;
+    border: none;
+    border-radius: 4px;
+    font-size: large;
+    margin: 2% 30% 5% 30%;
+    outline: none;
+}
+
+.read-btn {
+    border: none;
+    border-radius: 4px;
+    font-size: large;
+    margin: 2% 30% 5% 30%;
+    outline: none;
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.read-btn:hover {
+    background-color: #7a7a7a;
+    cursor: pointer;
+}
+
+.subtile {
+    background-color: #206283;
+    font-size: larger;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}

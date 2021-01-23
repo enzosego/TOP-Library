@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+<body>
+
+
+<div id="top-container">
+    <div id="title">
+        <img id="logo" src="images/book-reader-solid.svg">
+        <h1>myLibrary</h1>
+    </div>
+    
+    <div id="book-info">
+        <form id="new-form">
+            <input type="text" class="text-input" id="book-title" placeholder="Title of your book">
+            <input type="text" class="text-input"  id="book-author" placeholder="Author of the book">
+            <input type="text" class="text-input" id="book-pages" placeholder="Number of pages">
+            
+            <lable for="read-or-not"><p>Read it yet?</p></lable>
+            <input type="checkbox" id="check" name="read-or-not">
+
+        </form>
+        
+        <button id="new-book">ADD BOOK</button>
+    </div>
+
+
+
+</div>
+
+<div id="book-container"></div>
+
+    
+</body>
+
+<script src="index.js"></script>
+</html>
