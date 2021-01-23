@@ -17,11 +17,15 @@ if (lStorageCopy) {
         allBooks.push(lStorageCopy[i]);
         if (lStorageCopy[i]['read'] === true) {
             readOrNot = true;
+        } else if (lStorageCopy[i]['read'] === false) {
+            readOrNot = false;
         }
         pushTheTile();
         pushTheBook();
     }
 }
+
+readOrNot = false;
 
 checkBox.addEventListener('change', (e) => {
     if (checkBox.checked) {
