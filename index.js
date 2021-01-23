@@ -74,6 +74,7 @@ newBook.addEventListener('click', () => {
 
     if (checkBox.checked) {
         checkBox.checked = false;
+        readOrNot = false;
     }
 });
 
