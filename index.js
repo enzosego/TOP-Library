@@ -15,6 +15,9 @@ let lStorageCopy = JSON.parse(localStorage.getItem('books'));
 if (lStorageCopy) {
     for (let i = 0; i < lStorageCopy.length; i++) {
         allBooks.push(lStorageCopy[i]);
+        if (lStorageCopy[i]['read'] === true) {
+            readOrNot = true;
+        }
         pushTheTile();
         pushTheBook();
     }
@@ -105,6 +108,7 @@ function pushTheBook() {
     numPages.textContent = `${allBooks[allBooks.length - 1]['pages']} pages`;
     
     removeBtn.textContent = 'Remove';
+
     if (readOrNot == true) {
         readBtn.textContent = 'Already read';
         readBtn.style.backgroundColor = 'green';
@@ -128,12 +132,14 @@ document.addEventListener('click', function(e) {
             let readId = e.target.id;
             readId = readId.replace('read', '');
             allBooks[readId].read = true;
+            localStorage.setItem('books', JSON.stringify(allBooks))
         } else {
             e.target.textContent = 'Not read'; 
             e.target.style.backgroundColor = 'red';
             let readId = e.target.id;
             readId = readId.slice(readId.length - 1);
             allBooks[readId].read = false;
+            localStorage.setItem('books', JSON.stringify(allBooks))
         }
     }
 });
